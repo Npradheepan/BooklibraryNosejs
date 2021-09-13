@@ -7,6 +7,7 @@
     //Router Requirements / module Import
     const indexRouter = require('./routes/index')
     const authorRouter = require('./routes/authors')
+    const bookRouter = require('./routes/books')
 
     require('dotenv/config')
 
@@ -31,5 +32,6 @@
     //Use The Router
     app.use('/', indexRouter)
     app.use('/authors', authorRouter)
+    app.use('/books', bookRouter)
     //Connection of port
     app.listen(process.env.PORT || 3000)
